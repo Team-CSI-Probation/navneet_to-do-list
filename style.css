@@ -34,21 +34,7 @@ body{
     color:firebrick; 
     /* color: rgb(97, 243, 122); */
 }
-#todos .heading h1::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    bottom: 0;
-    width: 10%;
-    height: 2px;
-    background-color:firebrick;
-    transition: .5s;
-}
-#todos .heading h1:hover::after{
-    width: 100%;
-}
+
 /* css for container */
 #todos .todo-input-container{
     width: 100%;
@@ -58,7 +44,7 @@ body{
 }
 /* css for bar */
 #todos .todo-input-container .todo_input{
-    width: 100%;
+    width: 80%;
     height: 40px;
     color: white;
     background-color: black;
@@ -67,8 +53,7 @@ body{
     border: none;
     }
     /* css for add items */
-#todos .todo-input-container .add-item,
-#todos .todo-input-container .deleteBtn{
+#todos .todo-input-container .add-item{
     position: absolute;
     right: 0;
     top: 50%;

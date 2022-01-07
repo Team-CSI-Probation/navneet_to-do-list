@@ -31,15 +31,6 @@ if(addelement.value.trim()){
     completebtn.classList.add('completed');
     completebtn.innerHTML = '<i class="fas fa-check"></i>';
 
-    /* Edit Button */
-    var editbtn = document.createElement('button');
-    editbtn.classList.add('editBtn');
-    editbtn.innerHTML = '<i class="far fa-edit"></i>';
-    
-    /* edit the task */
-    editbtn.onclick = function(){
-        edittask(litag);
-    }
 
     /* delete button */
     var delbtn = document.createElement('button');
@@ -57,7 +48,6 @@ if(addelement.value.trim()){
     todoList.appendChild(litag);
     todoList.appendChild(buttonDiv);
     buttonDiv.appendChild(completebtn);
-    buttonDiv.appendChild(editbtn);
     buttonDiv.appendChild(delbtn);
    
     /* append all element(ul-tag) with main container */
@@ -70,7 +60,7 @@ if(addelement.value.trim()){
         {
             var ft1 = selectbtn.parentElement;
             var ft2 = ft1.parentElement;
-            ft2.classList.add('linethrough');
+            ft2.classList.toggle('linethrough');
 
         }
         else if(selectbtn.classList[0]==='trash')
@@ -103,11 +93,4 @@ else if(addelement.value === '')
 function edittask(e){
     var editValue = prompt('Edit the selected task', e.firstChild.nodeValue);
     e.firstChild.nodeValue = editValue;
-}
-function deleteAllElements(){
-    var getultag = document.querySelectorAll('.todo-list-container');
-    
-    for(var i = 0; i < getultag.length; i++){
-    getultag[i].remove();
-    }
 }
