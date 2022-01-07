@@ -31,7 +31,7 @@ body{
     position: relative;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    color: rgb(10, 226, 125); 
+    color:firebrick; 
     /* color: rgb(97, 243, 122); */
 }
 #todos .heading h1::after{
@@ -43,7 +43,7 @@ body{
     bottom: 0;
     width: 10%;
     height: 2px;
-    background-color:rgb(10, 226, 125);;
+    background-color:firebrick;
     transition: .5s;
 }
 #todos .heading h1:hover::after{
@@ -75,14 +75,14 @@ body{
     transform: translateY(-50%);
     width: 40px;
     height: 40px;
-    background-color: rgb(245, 8, 8); 
+    background-color:red; 
     color: black;
     line-height: 40px;
     cursor: pointer;  
 }
 #todos .todo-input-container .add-item:nth-child(2){
     right: 40px;
-    background-color: rgb(240, 132, 9);
+    background-color:yellowgreen;
     color: black;
 }
 
